@@ -1,16 +1,13 @@
+// /src/app/not-found.tsx
+
 import ErrorPage from '@/components/error';
 import Wrapper from '@/layout/Wrapper';
 import React from 'react';
 
-export const metadata = {
-  title: "404 - Mahalakshmi Dental Lab",
-};
-const index = () => {
+export default function NotFound() {
   return (
     <Wrapper>
       <ErrorPage />
     </Wrapper>
   );
-};
-
-export default index;
+}
