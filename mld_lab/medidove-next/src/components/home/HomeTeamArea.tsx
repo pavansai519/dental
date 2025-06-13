@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import about_icon_1 from "@/assets/img/home/IPS E Max.png";
 import about_icon_2 from "@/assets/img/home/IMPLANT PROSTHESIS.png";
 import about_icon_3 from "@/assets/img/home/IVOCLOR Zenostar.png";
@@ -10,6 +11,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
  
+ 
 interface AboutContentDatatype {
   about_data: {
     id: number;
@@ -17,6 +19,7 @@ interface AboutContentDatatype {
     img: StaticImageData;
     title: string;
     sm_info: string;
+    link: string;
   }[];
 }
  
@@ -28,6 +31,7 @@ const about_content: AboutContentDatatype = {
       img: about_icon_1,
       title: "IPS E-Max",
       sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      link: "/services/IPS_EMAX",
     },
     {
       id: 2,
@@ -35,6 +39,7 @@ const about_content: AboutContentDatatype = {
       img: about_icon_2,
       title: "IMPLANT PROSTHESIS",
       sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      link: "/services/IMPLANT_PROSTHESIS",
     },
     {
       id: 3,
@@ -42,6 +47,7 @@ const about_content: AboutContentDatatype = {
       img: about_icon_3,
       title: "IVOCLOR ZENOSTAR",
       sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      link: "/services/ZENOSTAR",
     },
     {
       id: 4,
@@ -49,6 +55,7 @@ const about_content: AboutContentDatatype = {
       img: about_icon_4,
       title: "CERCON",
       sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      link: "/services/CERCON_DENTSPLY",
     },
     {
       id: 5,
@@ -56,6 +63,7 @@ const about_content: AboutContentDatatype = {
       img: about_icon_5,
       title: "MLS",
       sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      link: "/services/MLS",
     },
     {
       id: 6,
@@ -63,6 +71,7 @@ const about_content: AboutContentDatatype = {
       img: about_icon_6,
       title: "MLD ZIRCONIA",
       sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      link: "/services/ZIRCONIA_MLD_BRAND",
     },
   ],
 };
@@ -76,17 +85,17 @@ const AboutAreaHomeTwo = () => {
     speed: 1000,
     autoplay: true,
     autoplaySpeed: 2000,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToShow: 6,
+    slidesToScroll: 0,
     responsive: [
       {
-        breakpoint: 992, // tablet
+        breakpoint: 992,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 576, // mobile
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
         },
@@ -95,18 +104,25 @@ const AboutAreaHomeTwo = () => {
   };
  
   return (
-    <section className="about-area about-area-mid pt-50 pb-50">
+    <section className="about-area about-area-mid pb-20">
       <div className="container">
         <div className="row">
           <Slider {...settings}>
             {about_data.map((item, i) => (
               <div key={i}>
-                <div className={`feature-box ${item.cls} items-center justify-center text-center`}>
-                  <div className="feature-small-icon mb-15">
-                    <Image src={item.img} alt="theme-pure" />
+                <div className={`${item.cls} flex flex-col items-center justify-center text-center bg-transparent p-0 shadow-none pt-5`}>
+                  <div className="feature-small-icon">
+                    <Link href={item.link}>
+                      <Image src={item.img} alt={item.title} width={135} height={105}className="w-16 h-16 rounded-full mx-auto object-cover shadow-md"/>
+                    </Link>
                   </div>
+                 
                   <div className="feature-small-content">
-                    <h3 className="text-lg font-semibold mt-2">{item.title}</h3>
+                    <Link href={item.link}>
+                      <h6 className="text-lg font-semibold mt-2 hover:underline">
+                        {item.title}
+                      </h6>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -1,112 +1,111 @@
-'use client';
-import React from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
-import about_icon_1 from "@/assets/img/home/online Booking.png";
-import about_icon_2 from "@/assets/img/home/Quality Driven.png";
-import about_icon_3 from "@/assets/img/home/Research Team.png";
-import about_icon_4 from "@/assets/img/home/Quality Materials.png";
-import about_icon_5 from "@/assets/img/home/Promt Delvery.png";
-import about_icon_6 from "@/assets/img/home/Friendly Staff.png";
+import Image, { StaticImageData } from "next/image";
+import back_icon from "@/assets/img/section/section-back-icon.png";
+import title_line from "@/assets/img/shape/section-title-line.png";
 
-interface AboutContentDatatype {
-  about_data: {
-    id: number;
-    cls: string;
-    img: StaticImageData;
-    title: string;
-    sm_info: string;
+import service_icon_1 from "@/assets/img/services/service-icon-1.png";
+import service_icon_2 from "@/assets/img/services/service-icon-2.png";
+import service_icon_3 from "@/assets/img/services/service-icon-3.png";
+import service_icon_4 from "@/assets/img/services/service-icon-4.png";
+import service_icon_5 from "@/assets/img/services/service-icon-5.png";
+import service_icon_6 from "@/assets/img/services/service-icon-6.png";
+import Link from "next/link";
+
+interface service_content_type {
+  sub_title: string;
+  title: string;
+  service_data: {
+      id: number;
+      img: StaticImageData;
+      title: string;
+      sm_des: string;
   }[];
 }
-
-const about_content: AboutContentDatatype = {
-  about_data: [
+const service_content: service_content_type = {
+  sub_title: "Departments",
+  title: "Managed Our Services",
+  service_data: [
     {
       id: 1,
-      cls: "mb-40",
-      img: about_icon_1,
-      title: "Online Booking",
-      sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      img: service_icon_1,
+      title: "Research Team",
+      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     },
     {
       id: 2,
-      cls: "mb-40",
-      img: about_icon_2,
-      title: "Quality Driven",
-      sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      img: service_icon_2,
+      title: "Quality Materials",
+      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     },
     {
       id: 3,
-      cls: "mb-30",
-      img: about_icon_3,
-      title: "Research Team",
-      sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      img: service_icon_3,
+      title: "Quality Driven",
+      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     },
     {
       id: 4,
-      cls: "mb-30",
-      img: about_icon_4,
-      title: "Quality Materials",
-      sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      img: service_icon_4,
+      title: "Prompt Delivery",
+      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     },
     {
       id: 5,
-      cls: "mb-30",
-      img: about_icon_5,
-      title: "Prompt Delivery",
-      sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      img: service_icon_5,
+      title: "Online Booking",
+      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     },
     {
       id: 6,
-      cls: "mb-30",
-      img: about_icon_6,
+      img: service_icon_6,
       title: "Friendly Staff",
-      sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     },
   ],
-};
+}
+const { sub_title, title, service_data } = service_content
 
-const { about_data } = about_content;
-
-const HomeServiceArea = () => {
+const ServicesAreaHome = () => {
   return (
-    <section className="about-area about-area-mid pb-50">
-      <div className="container">
-        <Swiper
-          modules={[Pagination, Navigation]}
-          spaceBetween={30}
-          slidesPerView={3}
-          navigation
-          pagination={{ clickable: true }}
-          loop={true}
-          breakpoints={{
-            768: { slidesPerView: 1 },
-            992: { slidesPerView: 2 },
-            1200: { slidesPerView: 3 },
-          }}
-        >
-          {about_data.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className={`feature-box text-center ${item.cls}`}>
-                <div className="feature-small-icon mb-35">
-                  <Image src={item.img} alt={item.title} width={60} height={60} />
+    <>
+      <section className="servcies-area gray-bg pt-5 pb-90">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+              <div className="section-title text-center pos-rel mb-75">
+                {/* <div className="section-icon">
+                  <Image className="section-back-icon" src={back_icon} alt="theme-pure" />
+                </div> */}
+                <div className="section-text pos-rel">
+                  {/* <h5>{sub_title}</h5> */}
+                  <h2>{title}</h2>
                 </div>
-                <div className="feature-small-content">
-                  <h3>{item.title}</h3>
-                  <p>{item.sm_info}</p>
+                <div className="section-line pos-rel">
+                  <Image src={title_line} alt="theme-pure" />
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </section>
+            </div>
+          </div>
+          <div className="row">
+            {service_data.map((item, i) =>
+              <div key={i} className="col-xl-4 col-lg-6 col-md-6">
+                <div className="service-box text-center mb-30">
+                  <div className="service-thumb">
+                    <Image src={item.img} alt="theme-pure" />
+                  </div>
+                  <div className="service-content">
+                    <h3><Link href="#">{item.title}</Link></h3>
+                    <p>{item.sm_des}</p>
+                    {/* <Link className="service-link" href="/service-details">Read More</Link> */}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
-export default HomeServiceArea;
+export default ServicesAreaHome;

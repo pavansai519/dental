@@ -10,7 +10,7 @@ const HomeQuoteArea = () => {
             </div>
             <div className="col-sm-4 my-3">
               <div className="hero-slider-btn">
-                <Link data-animation="fadeInLeft" data-delay=".6s" href="/doctor" className="btn btn-icon btn-icon-blue ml-0"><span>+</span>Get a Quote</Link>
+                <Link data-animation="fadeInLeft" data-delay=".6s" href="/contact" className="btn btn-icon btn-icon-blue ml-0"><span>+</span>Contact Us</Link>
               </div>
             </div>
           </div>

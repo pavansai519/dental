@@ -237,6 +237,19 @@ label {
 .separator {
 	border-bottom: 2px solid #eae7ff 
 }
+.custom-rounded {
+  border-radius: 10%;
+  overflow: hidden; 
+  size: 10px;
+}
+
+.img-rounded {
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
 /* button style */
 .btn {
 	-moz-user-select: none;
@@ -2308,7 +2321,7 @@ li.price-del i {
 }
 /* features */
 .feature-box {
-	padding: 40px;
+	padding: 20px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0px 8px 16px 0px rgba(205, 190, 255, 0.2);
 }

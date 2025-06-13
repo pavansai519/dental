@@ -35,15 +35,16 @@ const counter_data: DataType[] = [
 const HomePartnerArea = () => {
   return (
     <>
-      <section className="counter-wraper pt-50 pb-10 gray-bg">
+      <section className="counter-wraper pt-10 pb-30 gray-bg">
         <div className="container">
-          <h2 className="text-center pb-20">AUTHORISED PARTNER</h2>
+          <h2 className="text-center mb-60">AUTHORISED PARTNER</h2>
           <div className="row">
             {counter_data.map((item, i) =>
               <div key={i} className="col-lg-4 col-md-6 text-center">
                 <div className="single-couter mb-30">
-                  <Image src={item.icon} alt="theme-pure"/>
+                  <Image src={item.icon}  className="partner-logo-img" alt="theme-pure"/>
                   <div className="counter-text-box">
+                    <br/>
                     <h3>{item.title}</h3>
                     <p>{item.sm_des}</p>
                   </div>

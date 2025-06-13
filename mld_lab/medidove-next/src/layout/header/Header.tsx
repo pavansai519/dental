@@ -14,9 +14,9 @@ const Header = () => {
         <div className={`header-menu-area header-padding transparrent-header  ${sticky ? "sticky_menu sticky_navBar_bg" : ""}`}>
           <div className="container-fluid">
             <div className="row d-flex justify-content-between align-items-center">
-              <div className="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+              <div className="col-xl-3 col-lg-2 col-md-6 col-sm-6">
                 <div className="logo pos-rel">
-                  <Link href="/home"><h2 className="text-white">Mahalakshmi Dental Lab</h2></Link>
+                  <Link href="/"><h2 className="text-white">Mahalakshmi Dental Lab</h2></Link>
                 </div>
               </div>
               <div className="col-12 col-lg-8 col-md-6 col-sm-6">
@@ -30,6 +30,16 @@ const Header = () => {
                     <i className="fas fa-bars text-white"></i> </button>
                 </div>
               </div>
+               {/* <div className="col-xl-4 col-lg-2 d-none d-lg-block d-xl-block">
+                <div className="header-right f-right">
+                  <Link href="/contact" data-animation="fadeInLeft" data-delay=".6s" className="btn btn-icon btn-icon-green">
+                    <span>+</span>contact us
+                  </Link>
+                  <Link href="#" data-animation="fadeInLeft" data-delay=".6s" className="btn btn-icon btn-icon-white">
+                    <i className="fas fa-phone"></i>Make A Call
+                  </Link>
+                </div>
+              </div> */}
               <div className="col-12">
                 <div className="mobile-menu mobile-menu-white"></div>
               </div>

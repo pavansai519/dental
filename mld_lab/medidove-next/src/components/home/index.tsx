@@ -4,6 +4,8 @@ import HomeTeamArea from "./HomeTeamArea";
 import HomeServiceArea from "./HomeServiceArea";
 import HomePartnerArea from "./HomePartnerArea";
 import HomeQuoteArea from "./HomeQuoteArea"
+import MedicalTabHomeFive from "./MedicalTabHomeFive";
+import FactAreaHomeFour from "./FactAreaHomeFour";
 import HomeAboutArea from "./HomeAboutArea";
 import Footer from "@/layout/footer/Footer";
 
@@ -14,10 +16,16 @@ const Home = () => {
       <main>
         <HeroBannerHome />
         <HomeTeamArea />
+          <HomeAboutArea />
+
         <HomeServiceArea />
-        <HomePartnerArea />
+       <HomePartnerArea />
+
+        <FactAreaHomeFour/>
+        <MedicalTabHomeFive/>
+        
+    
         <HomeQuoteArea />
-        <HomeAboutArea />
       </main>
       <Footer />
     </>

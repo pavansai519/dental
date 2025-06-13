@@ -14,17 +14,17 @@ const MenuData: MenuDataType[] = [
   {
     id: 1,
     title: "HOME",
-    link: "/home",
+    link: "/",
     has_dropdown: false, 
     sub_menus: [],
   },
-  {
-    id: 2,
-    title: "ABOUT US",
-    link: "/about",
-    has_dropdown: false, 
-    sub_menus: [],
-  },
+  // {
+  //   id: 2,
+  //   title: "ABOUT US",
+  //   link: "/about",
+  //   has_dropdown: false, 
+  //   sub_menus: [],
+  // },
   {
     id: 3,
     title: "SERVICES +",
