@@ -27,7 +27,7 @@ const counter_data: DataType[] = [
   {
     id: 3,
     icon: counter_icon_3,
-    title: "3M LAVA",
+    title: "3M ",
     sm_des: "3M Lava is a premium zirconia material used in dental crowns and bridges, offering strength, translucency, and natural aesthetics.",
   },
 ]
