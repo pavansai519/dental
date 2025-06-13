@@ -29,7 +29,7 @@ const about_content: AboutContentDatatype = {
       id: 1,
       cls: "mb-40",
       img: about_icon_1,
-      title: "IPS E-Max",
+      title: "IPS",
       sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
       link: "/services/IPS_EMAX",
     },
