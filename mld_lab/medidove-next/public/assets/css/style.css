@@ -5519,3 +5519,25 @@ p.checkout-coupon input[type="text"] {
 	border: none !important;
 	box-shadow: none !important;
 }
+
+.partner-logo-img {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+ 
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.service-box {
+  border: 1px solid transparent;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+ 
+  &:hover {
+    border:  #007BFF; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  }
+}
