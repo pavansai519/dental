@@ -37,7 +37,7 @@ const HomePartnerArea = () => {
     <>
       <section className="counter-wraper pt-50 pb-10 gray-bg">
         <div className="container">
-          <h2 className="text-center pb-20">AUTHORISED PARTNER</h2>
+          <h2 className="text-center pb-20">AUTHORISED PARTNERS</h2>
           <div className="row">
             {counter_data.map((item, i) =>
               <div key={i} className="col-lg-4 col-md-6 text-center">
